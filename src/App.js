@@ -1,13 +1,31 @@
 import './App.css';
+import Header from './components/Header';
+import Todos from './components/Todos';
+import Footer from './components/Footer';
 
 function App() {
+  let todos = [
+    {
+      sno:1,
+      title:"GO to the market!",
+      desc:"go to the market to buy vegetables tonight"
+    },
+    {
+      sno:2,
+      title:"homework",
+      desc:"complete your homework"
+    },
+    {
+      sno:3,
+      title:"coding",
+      desc:"finish the react web application"
+    }
+  ];
   return (
     <>
-    <nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">To Do List with React</span>
-  </div>
-</nav>
+      <Header title="My TODO list"/>
+      <Todos todos = {todos}/>
+      <Footer />
     </>
   );
 }
